@@ -1,4 +1,4 @@
-package UtdDsa;
+package UtdDsa.Stacks;
 
 public class Stacks<T> {
     // Generic array to hold elements

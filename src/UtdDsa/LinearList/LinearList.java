@@ -1,4 +1,4 @@
-package UtdDsa;
+package UtdDsa.LinearList;
 
 public class LinearList {
     // array created
