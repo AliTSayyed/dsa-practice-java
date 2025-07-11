@@ -1,0 +1,2 @@
+The programmer wrote the program.
+It's the second line.
