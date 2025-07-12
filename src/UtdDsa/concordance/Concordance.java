@@ -33,13 +33,6 @@ class treeNode {
         lines = new listNode(lineNumber);
     }
 
-    public void printLineNumbers() {
-        listNode current = lines;
-        while (current != null) {
-            System.out.print(current.num + " ");
-            current = current.next;
-        }
-    }
 }
 
 // create the binary search tree with recursion and comparing strings
@@ -48,7 +41,7 @@ public class Concordance {
     treeNode root;
 
     // create a method to insert a word and its line number
-    // compare the word from the root node, if the word les less go left, if it is
+    // compare the word from the root node, if the word is less go left, if it is
     // greater go right and if it is the same word, we increment the frequency, and
     // make lines.next = new listNode(lineNumber) IF the line number is not the same
     // as the current line (i.e 1-2-3 not 1-1-2)
@@ -97,9 +90,17 @@ public class Concordance {
         if (root != null) {
             inOrderPrintRec(root.left);
             System.out.print("Word: " + root.word + ", " + "Frequency: " + root.frequency + ", Found on Lines: ");
-            root.printLineNumbers();
+            printLineNumbers(root.lines);
             System.out.println();
             inOrderPrintRec(root.right);
+        }
+    }
+
+    private void printLineNumbers(listNode lines) {
+        listNode current = lines;
+        while (current != null) {
+            System.out.print(current.num + " ");
+            current = current.next;
         }
     }
 
